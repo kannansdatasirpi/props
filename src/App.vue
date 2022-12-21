@@ -1,15 +1,29 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
-</template>
+  <!-- <GreetIng name="Peter" heroName="Batman"/>
+  <GreetIng name="John" heroName="Superman"/>
+  <GreetIng name="Smith" heroName="Wonder Woman"/>
+<GreetIng :name="name" :heroName="channel" /> -->
+<div id="article">
+
+<ArticlePage title="Article Title" :likes="50"  :isPublished="true"/>
+</div>
+</template>  
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// import GreetIng from './components/Greet.vue'
+import ArticlePage from './components/ArticlePage.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    // GreetIng,
+    ArticlePage
+  },
+  data(){
+    return {
+      name: 'Vishwas',
+      channel: 'Codevoluation'
+    }
   }
 }
 </script>
